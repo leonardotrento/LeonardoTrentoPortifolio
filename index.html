@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Portifolio Leonardo Da Silva Trento</title>
+</head>
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+             <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+             <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+            <h1>Leonardo Da Silva Trento</h1>
+            <p class="sub-titulo">Back-end Developer</p>
+    </main>
+
+    <section id="sobre" class="apresentacao">
+        <div class="apresentacao-caixa">
+            <h2 class="apresentacao-titulo">Um pouco sobre mim</h2>
+            <p class="apresentacao-texto">
+            Sou um entusiasta da área de tecnologia, com grande interesse em transformar ideias em soluções práticas por meio do desenvolvimento de sistemas com código limpo, moderno e eficiente. Optei por iniciar minha trajetória profissional no desenvolvimento back-end, compreendendo que este é apenas o primeiro de diversos caminhos que pretendo explorar ao longo da minha carreira na área de tecnologia.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
+
+            <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7348682351981309952/">
+                <div class="projetos-card">
+                    <img src="img/fotografico.jpeg" alt="Projeto 1" class="projetos-imagem">
+                    <div class="caixa-projeto">
+                        <h3 class="info-projetos">Projeto de analises de dados</h3>
+                        <p class="paragrafo-projetos">Projeto de Análise de Dados com Futebol, a análise foi feita utilizando ferramentas como Python (pandas) e dados históricos do Brasileirão. A ideia foi transformar números em insights concretos sobre performance e rebaixamento além de criar novas estatísticas com base das já presentes na tabela.</p>
+                    </div>
+                </div>
+            </a> 
+            <a target="_blank" href="https://www.linkedin.com/feed/update/urn:li:activity:7338937505544585221/">
+                <div class="projetos-card">
+                    <img src="img/fotoatv.jpeg" alt="Projeto 2" class="projetos-imagem">
+                    <div class="caixa-projeto">
+                        <h3 class="info-projetos">Registro de tabela de atividades de uma empresa</h3>
+                        <p class="paragrafo-projetos">Um sistema de cadastro de tarefas simples e funcional. Nele, o usuário pode registrar um nome, uma tarefa e o prazo de entrega. As informações são armazenadas de forma segura em um banco de dados relacional.</p>
+                    </div>
+                </div>
+            </a>
+            <a target="_blank" href="https://leonardotrento.github.io/BrownieDoBiel/">
+                <div class="projetos-card">
+                    <img src="img/brownieBiel.png" alt="Projeto 3" class="projetos-imagem">
+                    <div class="caixa-projeto">
+                        <h3 class="info-projetos">Loja de Brownies</h3>
+                        <p class="paragrafo-projetos">Uma empresa especializada em brownies artesanais. Desenvolvimento de um site institucional moderno, adaptável para celulares e com foco em apresentar os produtos de forma atraente e objetiva.</p>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea id="mensagem" class="campo-form" placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao">Enviar Mensagem</button>
+        </form>     
+    </section>
+
+    <script>
+        function enviarWhats(event){
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5548998644601'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+
+        }   
+    
+    </script>
+</body>
+</html>
