@@ -86,6 +86,12 @@ h1{
     color: var(--claro);
 }
 
+#linguagens{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
 .apresentacao {
   padding: 6rem 2rem;
   background-color: var(--maisEscuro);
